@@ -377,7 +377,7 @@ console.log("myCase",myCase);
                             <div className='headerName'>
                                 <h3>Thank You</h3>
                             </div>
-                            <div className='d-flex m-4 mt-2' >
+                            <div className='d-flex m-4 mt-2' style={{"padding" : "15% 0px 20% 10%"}}>
                                 <div className='mb-3 mt-5'>
                                     <label className='form-label mx-4 mb-0 font'>Name</label><br />
                                     <label className='form-label mx-4 mb-0 font'>Packege_Type</label><br />
