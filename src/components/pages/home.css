@@ -1,0 +1,72 @@
+.main-content{
+    background-color: #ADD8E6;
+      height: 100%;
+      width: 450px;
+  }
+.imgLogo{
+    display: flex;
+    justify-content: center;
+}
+
+.headerName{
+    display: flex;
+    justify-content: center;
+    color: blue;
+    text-shadow: 1px 1px blueviolet;
+}
+.listSpecification{
+    margin: 5%;
+}
+.listSpecification li{
+    padding: 2%;
+}
+
+.getStartBtn{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+
+.getStartBtn_Btn{
+    background: pink;
+    height: 35px;
+    width: 30%;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.leftBack{
+    margin-left: 3%;
+    margin-top: 1%;
+    opacity: 0.5;
+}
+
+.dropDown_Package{
+    display: grid;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.datePicker{
+    display: grid;
+    justify-content: center;
+}
+
+.planeDiv{
+    margin-top: 10% ;
+ margin-left: 30% !important
+}
+
+.hendLogo{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+.hendLogo img {
+    width: 15%;
+    height: 89px;
+}
+
+.errMsg{
+    color: red;
+}
