@@ -1,4 +1,4 @@
-import { ADD_NAME, CONTACT_NUMBER, NEXT_PAGE , PACKAGE_PLANE, PACKAGE_TYPE, PREVIOUS_PAGE, PRICE_TYPE, START_DATE } from "./AllType";
+import { ADD_NAME, CONTACT_NUMBER, NEXT_PAGE , PACKAGE_PLANE, PACKAGE_TYPE, PREVIOUS_PAGE, PRICE_TYPE, START_DATE, TOTEL_PRICE } from "./AllType";
 import { initialState } from "./intialState";
 
 const pageReducer = (state=initialState , action) => {
@@ -9,6 +9,8 @@ const pageReducer = (state=initialState , action) => {
     let packagePlane = ""
     let startDate = ""
     let price = ""
+    let totelPrice = ""
+
     switch(action.type){
         case NEXT_PAGE :
             page = action.payload + 1 
@@ -59,6 +61,12 @@ const pageReducer = (state=initialState , action) => {
                                     ...state,
                                     Price : price
                                 }
+                                case TOTEL_PRICE :
+                                    totelPrice = action.payload
+                                    return{
+                                        ...state,
+                                        Totel_Price : totelPrice
+                                    }
         default :
          return state
     }

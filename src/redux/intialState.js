@@ -6,5 +6,6 @@ export let initialState = {
     Price: "",
     Start_Date: "",
     Package_Plane: "",
+    Totel_Price : ""
   };
   

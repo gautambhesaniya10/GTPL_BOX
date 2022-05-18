@@ -1,4 +1,4 @@
-import { NEXT_PAGE , PREVIOUS_PAGE , ADD_NAME , CONTACT_NUMBER, PACKAGE_TYPE, PACKAGE_PLANE, START_DATE, PRICE_TYPE } from "./AllType";
+import { NEXT_PAGE , PREVIOUS_PAGE , ADD_NAME , CONTACT_NUMBER, PACKAGE_TYPE, PACKAGE_PLANE, START_DATE, PRICE_TYPE, TOTEL_PRICE } from "./AllType";
 
 export const NextPage = (payload) => {
     return{
@@ -50,6 +50,13 @@ export const startDate = (payload) => {
 export const price = (payload) => {
     return{
         type : PRICE_TYPE,
+        payload
+    }
+}
+
+export const totelPrice = (payload) => {
+    return{
+        type : TOTEL_PRICE,
         payload
     }
 }

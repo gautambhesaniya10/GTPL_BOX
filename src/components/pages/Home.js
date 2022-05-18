@@ -5,7 +5,7 @@ import leftIcon from '../../images/icons-left.png'
 import HendLogo from '../../images/n.png'
 import DatePicker from 'react-date-picker';
 import { useDispatch, useSelector } from 'react-redux/es/exports'
-import { NextPage, PreviousPage, AddName, ContactNumber, packageType, packagePlane, startDate ,price } from '../../redux/Action'
+import { NextPage, PreviousPage, AddName, ContactNumber, packageType, packagePlane, startDate ,price ,totelPrice } from '../../redux/Action'
 
 const Home = () => {
     var letters = /^[A-Za-z/ /]+$/;
@@ -138,6 +138,17 @@ const Home = () => {
         }
 
     }
+    const setPlan = (value) => {
+        if(value === "1-Month"){
+            dispatch(totelPrice(myCase.Price))
+        }else if(value === "3-Month"){
+            dispatch(totelPrice(myCase.Price * 2.8))
+        }else if(value === "6-Month"){
+            dispatch(totelPrice(myCase.Price * 5.5))
+        }else if(value === "1-Year"){
+            dispatch(totelPrice(myCase.Price * 11))
+        }
+    }
     const DropDownPlanChangeler = (e) => {
         const { name, value } = e.target;
         if (name === "package_plane") {
@@ -147,6 +158,7 @@ const Home = () => {
                 setPackageplane(value)
             } else {
                 setPackageplane(value)
+                setPlan(value)
                 setError({ ...error, packagePlaneSelectType: "" })
             }
         }
@@ -332,10 +344,10 @@ const Home = () => {
                                 </div>
                                 <div className='mb-3 mt-5'>
                                     <label className='form-label mx-4 mb-0 font'>Price</label><br />
-                                    <label className='form-label mx-4 mb-0 font'>250</label><br />
-                                    <label className='form-label mx-4 mb-0 font'>625</label><br />
-                                    <label className='form-label mx-4 mb-0 font'>1000</label><br />
-                                    <label className='form-label mx-4 mb-0 font'>1750</label><br />
+                                    <label className='form-label mx-4 mb-0 font'>{myCase.Price}</label><br />
+                                    <label className='form-label mx-4 mb-0 font'>{myCase.Price * 2.8}</label><br />
+                                    <label className='form-label mx-4 mb-0 font'>{myCase.Price * 5.5}</label><br />
+                                    <label className='form-label mx-4 mb-0 font'>{myCase.Price * 11}</label><br />
                                 </div>
                             </div>
                             <div className='getStartBtn'>
@@ -367,7 +379,7 @@ const Home = () => {
                                     <label className='form-label mx-4 mb-0 font'>{myCase.Package_Type}</label><br />
                                     <label className='form-label mx-4 mb-0 font'>{myCase.Start_Date}</label><br />
                                     <label className='form-label mx-4 mb-0 font'>{myCase.Package_Plane}</label><br />
-                                    <label className='form-label mx-4 mb-0 font'>{myCase.Price}</label><br />
+                                    <label className='form-label mx-4 mb-0 font'>{myCase.Totel_Price}</label><br />
                                 </div>
                             </div>
                         </div>

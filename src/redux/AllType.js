@@ -11,3 +11,4 @@ export const PACKAGE_PLANE = "PACKAGE_PLANE";
 
 export const START_DATE =  "START_DATE";
 export const PRICE_TYPE =  "PRICE_TYPE";
+export const TOTEL_PRICE =  "TOTEL_PRICE";
