@@ -11,7 +11,6 @@ const Home = () => {
     var letters = /^[A-Za-z/ /]+$/;
     const dispatch = useDispatch();
     const myCase = useSelector((state) => state)
-console.log("myCase",myCase);
     const [datePickervalue, setDatePickerValue] = useState(null);
     const [input, setInput] = useState(
         {
@@ -31,46 +30,27 @@ console.log("myCase",myCase);
             dateSelact: ""
         }
     );
+    // eslint-disable-next-line no-unused-vars
     const [plane, setPlane] = useState([
         {
             Package_Type: "SD",
-            price: 100,
-            Start_Date: "",
-            Select_Plane: " ",
-            Package_Plane: " ",
-            Package_Price: " "
+            price: 100
         },
         {
             Package_Type: "HD",
-            price: 500,
-            Start_Date: "",
-            Select_Plane: " ",
-            Package_Plane: " ",
-            Package_Price: " "
+            price: 500
         },
         {
             Package_Type: "Normal",
-            price: 200,
-            Start_Date: "",
-            Select_Plane: " ",
-            Package_Plane: " ",
-            Package_Price: " "
+            price: 200
         },
         {
             Package_Type: "HD+",
-            price: 1000,
-            Start_Date: "",
-            Select_Plane: " ",
-            Package_Plane: " ",
-            Package_Price: " "
+            price: 1000
         },
         {
             Package_Type: "UHD",
-            price: 1500,
-            Start_Date: "",
-            Select_Plane: " ",
-            Package_Plane: " ",
-            Package_Price: " "
+            price: 1500
         }
     ])
     const priceDispach = () => {
@@ -172,8 +152,6 @@ console.log("myCase",myCase);
         }
     }
     const datePicker = (date) => {
-        // const getYear =  date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
-
         if (!date) {
             setError({ ...error, dateSelact: "Please Select date" })
             setDatePickerValue(date)
@@ -188,7 +166,6 @@ console.log("myCase",myCase);
         if (!packagevalue) {
             setError({ ...error, packageSelectType: "Please Select PackageType" })
         } else {
-            //  dispatch(packageType(packagevalue))
             priceDispach()
             Nextpage()
             DisplayPage()

@@ -1,8 +1,6 @@
 import { NEXT_PAGE , PREVIOUS_PAGE , ADD_NAME , CONTACT_NUMBER, PACKAGE_TYPE, PACKAGE_PLANE, START_DATE, PRICE_TYPE } from "./AllType";
 
 export const NextPage = (payload) => {
-    console.log("payloadd",payload);
-    // console.log("paylod",payload);
     return{
         type : NEXT_PAGE,
         payload
