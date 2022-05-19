@@ -14,8 +14,8 @@ const Home = () => {
     const [datePickervalue, setDatePickerValue] = useState(null);
     const [input, setInput] = useState(
         {
-            name: "gautam",
-            mobileNo: "9429914508"
+            name: "",
+            mobileNo: ""
         }
     );
     const [page, setPage] = useState(0)
